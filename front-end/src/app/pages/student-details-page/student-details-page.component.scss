@@ -1,0 +1,7 @@
+@import '../../../styles/main.scss';
+
+:host {
+  width: 100%;
+  @include flexCenterCenter;
+  margin-top: 2em;
+}

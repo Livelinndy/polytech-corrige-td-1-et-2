@@ -1,0 +1,23 @@
+<div class="show-hide">
+  <div class="card">
+    <button class="btn-card" (click)="displayArchivedTicket = !displayArchivedTicket">
+      <ng-container *ngIf="displayArchivedTicket; else showArchivedTicket">HIDE ARCHIVED</ng-container>
+    </button>
+  </div>
+</div>
+
+<ng-template #showArchivedTicket>
+  SHOW ARCHIVED
+</ng-template>
+
+<div class="ticket-list">
+  <div class="ticket" *ngFor="let ticket of ticketList">
+
+    <!--Inputs & Output allow communication between parent & child components.-->
+    <!--More information: https://angular.io/guide/component-interaction-->
+    <ng-container *ngIf="displayArchivedTicket === ticket.archived">
+      <app-ticket [ticket]="ticket" (archiveTicket)="archiveTicket($event)"
+                  (deleteTicket)="deleteTicket($event)"></app-ticket>
+    </ng-container>
+  </div>
+</div>

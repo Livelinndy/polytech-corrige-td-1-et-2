@@ -1,0 +1,39 @@
+@import "./variables";
+
+$cardPadding: 1em;
+$cardContentColor: rgba(0, 0, 0, .54);
+$hoverColor: rgba(255, 255, 255, .2);
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 1rem;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-title {
+  h3 {
+    margin: 0;
+  }
+  padding: $cardPadding;
+}
+
+.card-content {
+  padding: 0 $cardPadding $cardPadding $cardPadding;
+  color: $cardContentColor;
+  font-size: 0.8em;
+
+  .fas, .far {
+    margin: 0.3em;
+  }
+}
+
+.card-action {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1em 0.5em 1em;
+  border-top: 1px solid rgba(0,0,0,.1);
+  font-size: 1.3em;
+}

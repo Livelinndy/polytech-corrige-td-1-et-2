@@ -1,0 +1,3 @@
+<ng-container *ngIf="(studentService.studentViewed$ | async) as student">
+  <app-student-details [student]="student" (updateStudent)="updateStudent($event)"></app-student-details>
+</ng-container>

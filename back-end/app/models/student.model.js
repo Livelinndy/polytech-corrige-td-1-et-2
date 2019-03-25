@@ -6,6 +6,8 @@ class StudentModel extends BaseModel {
     super('Student', {
       firstName: Joi.string().required(),
       lastName: Joi.string().required(),
+      email: Joi.string().email().required(),
+      profilePicture: Joi.string().optional(),
       notes: Joi.string().allow('').optional(),
     });
   }

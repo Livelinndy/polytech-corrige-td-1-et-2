@@ -1,0 +1,22 @@
+@import '../../../styles/card.scss';
+@import '../../../styles/main.scss';
+@import '../../../styles/button.scss';
+
+// You can apply style directly to a component
+app-ticket {
+  margin: 0.2em;
+}
+
+.ticket {
+  width: 40%;
+}
+
+.ticket-list {
+  @include flexCenterCenter;
+  flex-direction: column;
+}
+
+.show-hide {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  width: 100%;
+}
+
+app-student-form, app-student-list {
+  margin: 1em;
+}
+
+app-student-list {
+  flex: 10;
+}

@@ -1,0 +1,10 @@
+@import '../../../styles/card.scss';
+@import '../../../styles/button.scss';
+
+.student {
+  width: 100%;
+}
+
+.student:hover {
+  cursor: pointer;
+}

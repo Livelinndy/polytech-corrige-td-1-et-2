@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-title">
+    <h3>Create a new Student</h3>
+  </div>
+  <div class="card-content">
+    <form class="student-form" [formGroup]="studentForm">
+      <label for="firstName">
+        First Name <br>
+        <input class="input-custom" type="text" id="firstName" [formControlName]="'firstName'">
+      </label>
+      <br>
+      <label for="lastName">
+        Last Name <br>
+        <input class="input-custom" type="text" id="lastName" [formControlName]="'lastName'">
+      </label>
+      <br>
+      <label for="email">
+        Email <br>
+        <input class="input-custom" type="text" id="email" [formControlName]="'email'">
+      </label>
+      <br>
+      <label for="profilePicture">
+        Profile Picture <br>
+        <input class="input-custom" type="text" id="profilePicture" [formControlName]="'profilePicture'">
+      </label>
+    </form>
+  </div>
+  <div class="card-action">
+    <div class="right">
+      <button class="btn-card" (click)="addStudent()">CREATE</button>
+    </div>
+  </div>
+</div>
+<!-- Uncomment below to see your form structure and how it changes-->
+<!--<br><br>{{studentForm.getRawValue() | json}}-->

@@ -1,0 +1,7 @@
+<div class="student-list">
+  <div class="student" *ngFor="let student of studentList">
+    <app-student [student]="student"
+                 (showStudentDetails)="navigateStudentDetails($event)"
+                 (deleteStudent)="deleteStudent($event)"></app-student>
+  </div>
+</div>

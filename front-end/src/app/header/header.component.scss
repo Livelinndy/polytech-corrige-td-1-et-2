@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+
+/**
+ Use :host to apply some style to your entire component
+ */
+:host {
+  color: $white;
+}
+
+.header {
+  background: $linearGradient;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  margin-right: 2em;
+  color: white;
+  text-decoration: none;
+  font-size: 0.7em;
+}
+
+.navigation {
+  margin-left: 3em;
+}

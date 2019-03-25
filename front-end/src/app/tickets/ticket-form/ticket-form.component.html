@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="card-title">
+    <h3>Create a new ticket</h3>
+  </div>
+  <div class="card-content">
+    <form class="ticket-form" [formGroup]="ticketForm">
+      <label for="title">
+        Title <br>
+        <input class="input-custom" type="text" id="title" [formControlName]="'title'">
+      </label>
+      <br>
+      <label for="description">
+        Description <br>
+        <input class="input-custom" type="text" id="description" [formControlName]="'description'">
+      </label>
+      <br>
+      <div class="select">
+        Major
+        <select name="major-list" id="major " [formControlName]="'major'">
+          <option *ngFor="let major of majorList" [value]="major">
+            {{major}}
+          </option>
+        </select>
+      </div>
+      <div class="select">
+        Student
+        <select name="student-list" id="student" [formControlName]="'student'">
+          <option *ngFor="let student of studentList" [value]="student.id">
+            {{student.id}} - {{student.firstName}} {{student.lastName}}
+          </option>
+        </select>
+      </div>
+    </form>
+  </div>
+  <div class="card-action">
+    <div class="right">
+      <button class="btn-card" (click)="addTicket()">CREATE</button>
+    </div>
+  </div>
+</div>
+<!-- Uncomment below to see your form structure and how it changes-->
+<!--<br><br>{{ticketForm.getRawValue() | json}}-->

@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  width: 100%;
+}
+
+app-ticket-form, app-ticket-list {
+  margin: 1em;
+}
+
+app-ticket-list {
+  flex: 10;
+}

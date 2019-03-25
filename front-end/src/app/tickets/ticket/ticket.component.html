@@ -1,0 +1,40 @@
+<div class="card ticket">
+  <!-- we use the {{ }} syntax to display the data, more info: https://angular.io/guide/displaying-data-->
+  <div class="card-title">
+    <h3>{{ticket.title}}</h3>
+  </div>
+
+  <div class="card-content">
+    <div class="description" *ngIf="ticket.description">
+      {{ticket.description}}
+    </div>
+
+    <i class="fas fa-calendar-alt"></i> {{ticket.date | date: 'shortTime'}}
+    <i class="far fa-student"></i>
+    <ng-container *ngFor="let student of ticket.students">
+      <div class="name" *ngIf="student"><i class="fas fa-user"></i>{{student.firstName}} {{student.lastName}}</div>
+    </ng-container>
+
+    <div class="major" *ngFor="let major of majorList">
+      {{major}}
+    </div>
+    <div class="si" *ngIf="ticket.major === 'SI'">
+      <i class="fas fa-laptop"></i> {{ticket.major}}
+    </div>
+    <div class="si" *ngIf="ticket.major === 'GB'">
+      <i class="fas fa-biohazard"></i> {{ticket.major}}
+    </div>
+    <div class="si" *ngIf="ticket.major === 'GE'">
+      <i class="fas fa-biohazard"></i> {{ticket.major}}
+    </div>
+  </div>
+
+  <div class="card-action">
+    <div class="right">
+      <button class="btn-card" (click)="archive()">ARCHIVE</button>
+    </div>
+    <div class="left">
+      <button class="btn-icon-card" (click)="delete($event)"><i class="fas fa-trash"></i></button>
+    </div>
+  </div>
+</div>

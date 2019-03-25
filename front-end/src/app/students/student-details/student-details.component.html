@@ -1,0 +1,24 @@
+<div class="student card">
+  <div class="card-title">
+    <h3>{{student.firstName}} {{student.lastName}}</h3>
+  </div>
+  <div class="card-content">
+    <ng-container *ngIf="student.email">
+      <i class="fas fa-at"></i> {{student.email}}
+    </ng-container>
+    <ng-container *ngIf="student.notes">
+      <br>
+      <i class="far fa-clipboard"></i> &nbsp;{{student.notes}}
+    </ng-container>
+  </div>
+  <div class="card-action">
+    <form [formGroup]="studentForm">
+      <input type="textarea" [formControlName]="'notes'">
+      <br>
+    </form>
+    <button class="btn-card" type="submit" (click)="addNote()">ADD NOTE</button>
+  </div>
+</div>
+
+<!-- Uncomment below to see your form structure and how it changes-->
+<!--{{studentForm.getRawValue() | json}}-->

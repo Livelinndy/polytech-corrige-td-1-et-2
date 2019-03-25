@@ -1,0 +1,16 @@
+@import '../../../styles/card.scss';
+@import '../../../styles/main.scss';
+
+// You can apply style directly to a component
+app-student {
+  margin: 0.2em;
+}
+
+.student-list {
+  @include flexCenterCenter;
+  flex-direction: column;
+}
+
+.student {
+  width: 40%;
+}
