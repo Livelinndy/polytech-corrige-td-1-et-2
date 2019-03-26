@@ -39,8 +39,7 @@ export class StudentService {
     this.http.get<Student[]>(this.url)
       .pipe(
         take(1),
-        catchError((err: HttpErrorResponse) => this.errorService.handleError<Student[]>(err, 'get /students', [])),
-        filter((students) => students.length > 0))
+        catchError((err: HttpErrorResponse) => this.errorService.handleError<Student[]>(err, 'get /students', [])))
       .subscribe((students: Student[]) => {
         this.students$.next(students);
         this.studentList = students;

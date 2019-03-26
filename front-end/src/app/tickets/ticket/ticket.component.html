@@ -31,7 +31,7 @@
 
   <div class="card-action">
     <div class="right">
-      <button class="btn-card" (click)="archive()">ARCHIVE</button>
+      <button class="btn-card" (click)="archive()" *ngIf="!ticket.archived">ARCHIVE</button>
     </div>
     <div class="left">
       <button class="btn-icon-card" (click)="delete($event)"><i class="fas fa-trash"></i></button>

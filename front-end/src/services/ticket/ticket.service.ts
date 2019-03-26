@@ -39,8 +39,7 @@ export class TicketService {
     this.http.get<Ticket[]>(this.url)
       .pipe(
         take(1),
-        catchError((err: HttpErrorResponse) => this.errorService.handleError<Ticket[]>(err, 'get /tickets', [])),
-        filter((tickets) => tickets.length > 0))
+        catchError((err: HttpErrorResponse) => this.errorService.handleError<Ticket[]>(err, 'get /tickets', [])))
       .subscribe((tickets: Ticket[]) => {
         this.tickets$.next(tickets);
         this.ticketList = tickets;
