@@ -7,7 +7,7 @@ class StudentModel extends BaseModel {
       firstName: Joi.string().required(),
       lastName: Joi.string().required(),
       email: Joi.string().email().required(),
-      profilePicture: Joi.string().optional(),
+      profilePicture: Joi.string().allow('').optional(),
       notes: Joi.string().allow('').optional(),
     });
   }

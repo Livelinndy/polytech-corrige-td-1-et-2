@@ -56,7 +56,8 @@ router.put('/:studentId', (req, res) => {
 
 router.delete('/:studentId', (req, res) => {
   try {
-    res.status(200).json(Student.delete(req.params.studentId));
+    Student.delete(req.params.studentId);
+    res.status(204).end();
   } catch (err) {
     if (err.name === 'NotFoundError') {
       res.status(404).end();

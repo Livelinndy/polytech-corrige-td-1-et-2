@@ -17,7 +17,7 @@ export class StudentFormComponent implements OnInit {
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      profilePicture: ['', [Validators.required]]
+      profilePicture: ['']
     });
   }
 
